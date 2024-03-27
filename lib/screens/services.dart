@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_connect/pages/Helpline_Numbers.dart';
+import 'package:firebase_connect/pages/PanicGesturesPage.dart';
+import 'package:firebase_connect/pages/EmergencyContact.dart';
+import 'package:firebase_connect/pages/EmergencyContactsListScreen.dart';
+import 'package:firebase_connect/pages/User_guide.dart';
 
 class ServicesScreen extends StatelessWidget {
   @override
@@ -19,20 +24,42 @@ class ServicesScreen extends StatelessWidget {
             icon: Icons.contacts,
             onTap: () {
               // Navigate to Add Emergency Contacts screen
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AddEmergencyContactsScreen()),
+              );
             },
           ),
           ServiceBox(
             title: 'Emergency Contacts List',
             icon: Icons.list,
             onTap: () {
-              // Navigate to Emergency Contacts List screen
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => EmergencyContactsListScreen()),
+              );
+            },
+          ),
+          ServiceBox(
+            title: 'User Guide', // Add the new box here
+            icon: Icons.lightbulb,
+            onTap: () {
+              // Navigate to Jewelry Connection page
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => UserGuide()),
+              );
             },
           ),
           ServiceBox(
             title: 'Panic Gestures',
-            icon: Icons.dangerous,
+            icon: Icons.book,
             onTap: () {
               // Navigate to Panic Gestures screen
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PanicGesturesPage()),
+              );
             },
           ),
           ServiceBox(
@@ -47,6 +74,10 @@ class ServicesScreen extends StatelessWidget {
             icon: Icons.phone,
             onTap: () {
               // Navigate to Helpline Numbers screen
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HelplineNumbersPage()),
+              );
             },
           ),
         ],

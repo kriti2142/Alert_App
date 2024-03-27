@@ -16,6 +16,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text("HOME"),
         centerTitle: true,
+        backgroundColor:  Color.fromARGB(255, 122, 141, 246),// Set background color of the app bar
       ),
       drawer: AppDrawer(), // Use the AppDrawer widget
       body: ServicesScreen(), // Display the services screen

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_connect/logout.dart'; // Import your logout logic
+import 'package:firebase_connect/pages/AboutPage.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class AppDrawer extends StatelessWidget {
         children: [
           DrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: Color.fromARGB(255, 122, 141, 246),
             ),
             child: Text(
               'Menu',
@@ -35,7 +36,10 @@ class AppDrawer extends StatelessWidget {
             title: Text('About'),
             onTap: () {
               // Navigate to the about screen
-              // Add navigation logic here
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AboutPage()),
+              );
             },
           ),
           ListTile(
